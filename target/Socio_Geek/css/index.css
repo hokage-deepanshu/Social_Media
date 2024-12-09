@@ -1,0 +1,136 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 900;
+    font-family: 'Billabong', cursive;
+    padding-bottom: 15px;
+    font-size: 40px;
+}
+
+.main {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.left {
+    width: 50%; /* Keep the left section at 50% width */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    padding: 50px;
+}
+
+input[type="text"], input[type="password"] {
+    width: 70%;
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 70%;
+    padding: 10px 15px;
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: darkviolet;
+}
+
+#remember-me {
+    text-align: left;
+}
+
+.right {
+    width: 50%; /* Keep the right section at 50% width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right img {
+    max-width: 100%;
+    height: auto;
+    margin-right: 40px;
+}
+
+/* Media Query for Smaller Devices */
+@media (max-width: 768px) {
+    .main {
+        flex-wrap: nowrap; /* Prevent stacking of sections */
+        flex-direction: column-reverse; /* Keep image on the right */
+    }
+
+    .left, .right {
+        width: 100%; /* Use full width for smaller screens */
+    }
+
+    .right {
+        order: 2; /* Ensure the image stays on the right */
+    }
+
+    .left {
+        margin-top: 20px; /* Add spacing between sections */
+    }
+
+    .right img {
+        max-width: 90%; /* Adjust image size */
+        margin: 0 auto; /* Center the image horizontally */
+    }
+
+    form {
+        padding: 20px; /* Reduce form padding for smaller screens */
+    }
+
+    h1 {
+        font-size: 30px; /* Adjust heading size */
+    }
+}
+
+/* Media Query for Extra Small Devices */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px; /* Further reduce font size */
+    }
+
+    .main {
+        flex-direction: column; /* Stack sections vertically */
+        height: auto; /* Adjust height for content */
+    }
+
+    .right img {
+        max-width: 100%; /* Ensure image fits the screen width */
+    }
+
+    input[type="text"], input[type="password"], button {
+        font-size: 14px; /* Adjust font size for inputs */
+    }
+}

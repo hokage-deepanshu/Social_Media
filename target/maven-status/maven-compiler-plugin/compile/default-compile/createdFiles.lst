@@ -1,0 +1,10 @@
+com\user\model\Like.class
+com\user\dao\CommentDAO.class
+com\user\dao\UserDAO.class
+com\user\model\Post.class
+com\user\model\Follower.class
+com\user\dao\FollowerDAO.class
+com\user\model\User.class
+com\user\dao\LikeDAO.class
+com\user\dao\PostDAO.class
+com\user\model\Comment.class
